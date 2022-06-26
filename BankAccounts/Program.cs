@@ -7,7 +7,8 @@ account.MakeDeposit(100, DateTime.Now, "Friend paid me back");
 Console.WriteLine(account.GetAccountHistory());
 
 var giftCard = new GiftCardAccount("gift card", 100, 350);
-Console.WriteLine($"Account {giftCard.Number} was created for {giftCard.Owner} with {giftCard.Balance} initial balance.");
+Console.WriteLine(
+    $"Account {giftCard.Number} was created for {giftCard.Owner} with {giftCard.Balance} initial balance.");
 giftCard.MakeWithdrawal(20, DateTime.Now, "get expensive coffee");
 giftCard.MakeWithdrawal(50, DateTime.Now, "buy groceries");
 giftCard.PerformMonthEndTransactions();
@@ -24,7 +25,8 @@ savings.PerformMonthEndTransactions();
 Console.WriteLine(savings.GetAccountHistory());
 
 var lineOfCredit = new LineOfCreditAccount("line of credit", 0, 2000);
-Console.WriteLine($"Account {lineOfCredit.Number} was created for {lineOfCredit.Owner} with {lineOfCredit.Balance} initial balance.");
+Console.WriteLine(
+    $"Account {lineOfCredit.Number} was created for {lineOfCredit.Owner} with {lineOfCredit.Balance} initial balance.");
 // How much is too much to borrow?
 lineOfCredit.MakeWithdrawal(1000m, DateTime.Now, "Take out monthly advance");
 lineOfCredit.MakeDeposit(50m, DateTime.Now, "Pay back small amount");
